@@ -1,4 +1,4 @@
-package com.douglas.service;
+package com.douglas.contextos.service;
 
 import io.quarkus.runtime.Startup;
 import jakarta.inject.Singleton;

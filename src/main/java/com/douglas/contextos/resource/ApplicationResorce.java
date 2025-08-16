@@ -1,8 +1,7 @@
-package com.douglas.resource;
+package com.douglas.contextos.resource;
 
-import com.douglas.service.ApplicationService;
-import com.douglas.service.DependentService;
-import com.douglas.service.RequestService;
+import com.douglas.contextos.service.ApplicationService;
+import com.douglas.contextos.service.DependentService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

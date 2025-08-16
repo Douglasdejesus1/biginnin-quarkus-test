@@ -1,4 +1,4 @@
-package com.douglas.service;
+package com.douglas.contextos.service;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
