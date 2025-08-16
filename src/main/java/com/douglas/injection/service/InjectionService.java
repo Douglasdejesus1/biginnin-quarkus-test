@@ -1,4 +1,4 @@
-package com.douglas.service;
+package com.douglas.injection.service;
 
 import jakarta.enterprise.context.Dependent;
 import jakarta.enterprise.inject.spi.InjectionPoint;
@@ -7,7 +7,6 @@ import java.lang.annotation.Annotation;
 import java.util.stream.Collectors;
 
 @Dependent
-@Rare
 public class InjectionService {
 
     private final String nomeDoPontoDeInjecao;

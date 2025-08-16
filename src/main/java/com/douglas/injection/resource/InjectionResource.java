@@ -1,5 +1,5 @@
-package com.douglas.resource;
-import com.douglas.service.InjectionService;
+package com.douglas.injection.resource;
+import com.douglas.injection.service.InjectionService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
