@@ -1,14 +1,12 @@
 package com.douglas.httpcontext.resource;
 
-import io.vertx.core.spi.observability.HttpRequest;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.servlet.ServletContext;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
-import jakarta.ws.rs.QueryParam;
-import com.douglas.httpcontext.service.RequestService;
-import jakarta.ws.rs.core.Context;
+
+import java.util.ArrayList;
 
 
 @Path("/app")
@@ -37,3 +35,4 @@ public class AppResource {
                 "\nRealPath: " + realPath;
     }
 }
+
