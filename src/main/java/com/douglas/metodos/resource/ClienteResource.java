@@ -4,6 +4,7 @@ import com.douglas.metodos.entity.Cliente;
 import com.douglas.metodos.entity.ClienteRequestDTO;
 import com.douglas.metodos.entity.ClienteResponseDTO;
 import com.douglas.metodos.service.ClienteService;
+import io.quarkus.cache.CacheResult;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
@@ -31,7 +32,13 @@ public class ClienteResource {
     }
 
     @GET
+    @CacheResult(cacheName = "clientes-cache")
     public List<ClienteResponseDTO> listar() {
+        try {
+            Thread.sleep(5000); // simula operação lenta
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         return service.listar().stream()
                 .map(c -> new ClienteResponseDTO(c.getId(), c.getNome(), c.getIdade()))
                 .collect(Collectors.toList());
